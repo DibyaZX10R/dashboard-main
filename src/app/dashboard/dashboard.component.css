@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+.dashboard-container {
+    padding: 10px;
+    font-family: Karla, sans-serif;
+    background-color: #f3f4f6;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    font-family: Karla, sans-serif;
+    margin-left: 5px;
+}
+
+.date-range-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    height: 33px;
+    border-radius: 0px;
+    width: 280px;
+    /* max-width: 250px; */
+  }
+  
+  .date-range-column {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+  }
+  
+  .date-range-title {
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .date-range-row {
+    display: flex;
+    /* align-items: center; */
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    height: 60%;
+    margin-right: 8px;
+  }
+  
+  .date-range-select .mat-select-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .mat-option {
+    font-size: 14px;
+  }
+  .calendar-icon{
+    font-size: 16px;
+    color: gray;
+  }
+  .date-range-text{
+    font-size: 15px;
+    margin-top: -3px;
+  }
+  
+
+mat-form-field {
+    width: 100%;
+    max-width: 200px;
+    font-family: Karla, sans-serif;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-family: Karla, sans-serif;
+}
+
+.stat-card, .stat-card-pie {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    margin-right: 20px;
+    height: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Karla, sans-serif;
+}
+
+.stat-card:last-child, .stat-card-pie {
+    margin-right: 0;
+}
+
+/* Update for the first three stat cards */
+.stat-card:nth-child(-n+3) h2 {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    margin: 0;
+    z-index: 2;
+    font-size: 1em;
+    color: #1e1e1e;
+    text-align: left;
+    font-family: Karla, sans-serif;
+    align-self: flex-start;
+}
+
+.stat-card:nth-child(-n+3) .value {
+    font-size: 46px;
+    font-weight: 700;
+    margin-top: 40px; 
+    color: #111827;
+    position: relative;
+    display: inline-block;
+}
+
+.stat-card .percent {
+    font-size: 0.45em; /* Smaller size for the % sign */
+    position: absolute;
+    top: -0.28em;  /* Adjust this value to move it higher */
+    right:10; /* Adjust this value to move it to the right */
+    vertical-align: top;
+}
+.stat-card:nth-child(-n+3) .change {
+    font-size: 27px;
+    margin-right: 7px;
+    color: #10b981;
+    margin-top: 10px;
+}
+
+.stat-card:nth-child(-n+3) .comparison {
+    font-size: 7px;
+    color: #a7a9ae; 
+    font-weight: 600;
+    margin-top: -15px;
+    
+}
+
+
+
+.stat-card h2, .stat-card-pie h2, .chart h2 {
+    font-size: 1em;
+    margin-bottom: 40px;
+    
+    color: #1e1e1e;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    margin: 0;
+    z-index: 2;
+    text-align: left; 
+    align-self: flex-start; 
+}
+
+.stat-card .value {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #111827;
+    position: relative;
+    display: inline-block;
+}
+
+.stat-card .value .currency {
+    font-size: 0.45em; 
+    position: absolute;
+    left: -13px; 
+    top: -8px;
+    font-weight: 500;
+    
+    /* transform: translateY(40%); */
+    vertical-align: top;
+}
+
+.stat-card .change {
+    font-size: 1em;
+    color: #10b981;
+    
+}
+
+.stat-card-pie {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+ngx-charts-pie-chart {
+    /* height: 150px;
+    width: 250px; */
+    transform: rotate(0deg);
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.chart {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    position: relative;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chart h2 {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    margin: 0;
+    font-size: 1em;
+    color: #6b7280;
+    z-index: 2;
+    text-align: left; 
+    align-self: flex-start;
+}
+
+.chart-content {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chart-bubble-content {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chart-bubble{
+    margin-left: 220px;
+    margin-top: 190px;
+}
+.test{
+    background-color: white;
+}
+
+.chart-content {
+    padding-bottom: 30px; 
+  }
+  
+  .chart-content ngx-charts-bar-vertical-stacked {
+    display: block;
+    
+  }
+  
+  .chart-content .axis g text {
+    fill: grey !important; 
+    padding:10px;
+  }
+  
+  .chart-content .gridline-path,
+  .chart-content .gridline-tick {
+    stroke: grey !important; 
+  }
+
+/* Target the labels in the pie chart */
+
+  
+ngx-charts-bubble-chart, ngx-charts-bar-vertical-stacked {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}

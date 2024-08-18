@@ -1,0 +1,96 @@
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+<div class="dashboard-container">
+    <h1>Executive Dashboard</h1>
+    <div class="date-range-container">
+        <div class="date-range-column">
+          <div class="date-range-title">Auto date range</div>
+          <div class="date-range-row" (click)="openDatePicker(picker)">
+            <mat-icon class="calendar-icon">calendar_today</mat-icon>
+            <div class="date-range-text">This Month</div>
+          </div>
+          <mat-datepicker #picker></mat-datepicker>
+        </div>
+      </div>
+      
+      
+      
+      
+
+    <div class="stats">
+        <div class="stat-card">
+            <h2>New Wins</h2>
+            <p class="value">230</p>
+            <p class="change">↑ 25%</p>
+            <p class="comparison">vs previous 30 days</p>
+        </div>
+        <div class="stat-card">
+            <h2>Trial:Win Rate</h2>
+            <p class="value">9.86<span class="percent">%</span></p>
+            <p class="change">↑ 25%</p>
+            <p class="comparison">vs previous 30 days</p>
+        </div>
+        <div class="stat-card">
+            <h2>New MRR</h2>
+            <p class="value"><span class="currency">$</span>25,690</p>
+            <p class="change">↑ 8.7%</p>
+            <p class="comparison">vs previous 30 days</p>
+        </div>
+        <div class="stat-card">
+            <h2>Page Views</h2>
+            <ngx-charts-pie-chart
+                [results]="pageViewsData"
+                [scheme]="colorScheme2"
+                [view]=[210,200]
+                [doughnut]="true"             
+                [arcWidth]="0.5">
+            </ngx-charts-pie-chart>
+        </div>
+    </div>
+
+    <div class="charts">
+        
+        <div class="chart">
+           
+            <div class="chart-bubble">
+                <h2>MRR Stats by Country</h2>
+                
+                <app-mrr-bubble-chart></app-mrr-bubble-chart>
+            </div>
+        </div>
+
+          
+
+        <div class="chart">
+            <h2>MRR</h2>
+            
+
+            <div class="chart-content">
+                
+
+                <ngx-charts-bar-vertical-stacked
+                    [view]=[470,350]
+                    [barPadding]="40"
+                    [results]="mrrData"
+                    [scheme]="colorScheme"
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    [legend]="false"
+                    [yAxisTicks]=[-4000,-2000,0,2000,4000,6000,8000,10000,12000,14000]
+                    
+                    [yAxisTickFormatting]="yAxisTickFormatting"
+                    
+                   
+                    >
+                </ngx-charts-bar-vertical-stacked>
+            
+      
+            </div>
+        </div>
+      
+         
+        
+    </div>
+    
+</div>
+
